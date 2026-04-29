@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum Vitae - Fredy Adaro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            color: #333;
+        }
+
+        .cv-container {
+            max-width: 800px;
+            width: 100%;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        /* Encabezado */
+        .header {
+            background: linear-gradient(135deg, #1a3a5c, #2c5f8a);
+            color: white;
+            padding: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .header .profesion {
+            font-size: 1.2em;
+            font-weight: 300;
+            opacity: 0.95;
+            margin-bottom: 20px;
+        }
+
+        .contacto-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+
+        .contacto-info span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Contenido principal */
+        .contenido {
+            padding: 40px;
+        }
+
+        .seccion {
+            margin-bottom: 35px;
+        }
+
+        .seccion:last-child {
+            margin-bottom: 0;
+        }
+
+        .seccion h2 {
+            font-size: 1.4em;
+            color: #1a3a5c;
+            border-bottom: 2px solid #e0e6ed;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Perfil */
+        .perfil p {
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* Experiencia y Educación */
+        .item {
+            margin-bottom: 25px;
+        }
+
+        .item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .item-header h3 {
+            font-size: 1.1em;
+            color: #1a3a5c;
+            font-weight: 600;
+        }
+
+        .item-header .fecha {
+            font-size: 0.9em;
+            color: #777;
+            font-weight: 500;
+        }
+
+        .item .lugar {
+            font-weight: 500;
+            color: #2c5f8a;
+            margin-bottom: 5px;
+        }
+
+        .item p {
+            color: #555;
+            line-height: 1.6;
+            font-size: 0.95em;
+        }
+
+        /* Habilidades */
+        .habilidades-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .habilidad {
+            background: #f7f9fb;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border-left: 4px solid #2c5f8a;
+            font-weight: 500;
+            color: #333;
+        }
+
+        /* Idiomas */
+        .idiomas-lista {
+            list-style: none;
+        }
+
+        .idiomas-lista li {
+            padding: 8px 0;
+            color: #555;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+        }
+
+        .idiomas-lista li:last-child {
+            border-bottom: none;
+        }
+
+        .nivel {
+            font-weight: 600;
+            color: #2c5f8a;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .header {
+                padding: 30px 25px;
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+            .contenido {
+                padding: 25px;
+            }
+            .item-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Encabezado con datos personales -->
+        <div class="header">
+            <h1>Fredy Adaro</h1>
+            <div class="profesion"> Estudiante Universitario</div>
+            <div class="contacto-info">
+                <span>📧 fredyadaro@email.com</span>
+                <span>📱 +595 983 45 7 399</span>
+                <span>📍 Villarrica, Paraguy</span>
+                <span>🔗 linkedin.com/in/fredyadaro</span>
+            </div>
+        </div>
+
+        <!-- Contenido del CV -->
+        <div class="contenido">
+            <!-- Perfil Profesional -->
+            <div class="seccion perfil">
+                <h2>Perfil </h2>
+                <p>
+                    Soy estudiante de la carrera de Ingenieria en Sistemas Informaticos de la 
+                    Universidad Nacional de Villarrica del Espiritu Santo "UNVES" curso el Tercer 
+                    Año de la carrera.
+                </p>
+            </div>
+
+            <!-- Experiencia Laboral -->
+            <div class="seccion">
+                <h2>Experiencia Laboral</h2>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <h3>Ayudante en Panderia</h3>
+                        <span class="fecha">2016 - 2019</span>
+                    </div>
+                    <div class="lugar">Panaderia Extra_Pan. · Yuty</div>
+                    <p>
+                    Tres años Trabajando como Ayudante de Panaderia con experiencia en preparacion de
+                    distintos tipos de panificados.
+                    </p>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <h3>Tienda de Reparacion de Celulares</h3>
+                        <span class="fecha">2019 - 2022</span>
+                    </div>
+                    <div class="lugar">ServiCentro. · Yuty</div>
+                    <p>
+                        Experiencia en reparacion de todo tipo de celulares y computadoras; cambio de pantalla
+                        ,reparacion de celulares mojados, cambios de pines de carga, etc .
+                    </p>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <h3>Desarrollador Junior</h3>
+                        <span class="fecha">2022 - actualidad</span>
+                    </div>
+                    <div class="lugar">Independiente · Villarrica</div>
+                    <p>
+                        Desarrollo de sitios web y e-commerce con HTML5, CSS3, 
+                        JavaScript y PHP. Mantenimiento de bases de datos MySQL y soporte técnico tambien 
+                        desarrollo sistemas web con Python.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Educación -->
+            <div class="seccion">
+                <h2>Educación</h2>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <h3>Escuela Basica N°63 Dr Pedro Zarza Roa</h3>
+                        <span class="fecha">2010 - 2017</span>
+                    </div>
+                </div>
+                 <div class="item">
+                    <div class="item-header">
+                        <h3>Colegio Nac. Dr. Felipe Molas Lopez</h3>
+                        <span class="fecha">2018- 2023</span>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <h3>Ingeniería en Sistemas Informáticos</h3>
+                        <span class="fecha">2024 - Actualidad</span>
+                    </div>
+                    <div class="lugar">Universidad Nacional de Villarrica del Espiritu Santo "UNVES"</div>
+                    <p>Promedio de 3.95/5. Alumno Regular </p>
+                </div>
+            </div>
+
+            <!-- Habilidades Técnicas -->
+            <div class="seccion">
+                <h2>Habilidades Informaticas</h2>
+                <div class="habilidades-grid">
+                    <div class="habilidad">HTML5 & CSS3</div>
+                    <div class="habilidad">JavaScript (Básico)</div>
+                    <div class="habilidad">Node.js</div>
+                    <div class="habilidad">Python</div>
+                    <div class="habilidad">MongoDB</div>
+                    <div class="habilidad">MySQL / PostgreSQL</div>
+                    <div class="habilidad">Git & GitHub</div>
+                    <div class="habilidad">AWS (básico)</div>
+                    <div class="habilidad">Docker</div>
+                </div>
+            </div>
+
+            <!-- Idiomas -->
+            <div class="seccion">
+                <h2>Idiomas</h2>
+                <ul class="Idiomas-lista">
+                    <li>
+                        <span>Español</span>
+                        <span class="nivel">Nativo</span>
+                    </li>
+                    <li>
+                        <span>Guarani</span>
+                        <span class="nivel">Nativo</span>
+                    </li>
+                    <li>
+                        <span>Ingles</span>
+                        <span class="nivel">Intermedio B1</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
