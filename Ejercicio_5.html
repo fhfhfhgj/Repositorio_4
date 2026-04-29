@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Carlos Martínez</title>
+</head>
+<body>
+    <!-- 
+        ============================================
+        PORTAFOLIO DE CARLOS ANTONIO MARTÍNEZ SÁNCHEZ
+        Villarrica, Guairá, Paraguay
+        ============================================
+    -->
+
+    <!-- HEADER Y NAVEGACIÓN -->
+    <header>
+        <nav>
+            <h1>Carlos Antonio Martínez Sánchez</h1>
+            <ul>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <!-- Botón hamburguesa para móvil -->
+            <button class="hamburger" aria-label="Menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- SECCIÓN HERO -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h2>Desarrollador Web Frontend</h2>
+            <p>Villarrica, Guairá, Paraguay</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN HABILIDADES -->
+    <section id="skills" class="skills">
+        <h2>Mis Habilidades</h2>
+        <div class="tarjetas-container">
+            <div class="tarjeta">HTML5</div>
+            <div class="tarjeta">CSS3</div>
+            <div class="tarjeta">VS Code</div>
+        </div>
+    </section>
+
+    <!-- 
+        SECCIÓN PROYECTOS
+        Se agregaron 2 tarjetas de proyectos como solicitado
+    -->
+    <section id="proyectos" class="proyectos">
+        <h2>Proyectos</h2>
+        <div class="tarjetas-container">
+            <!-- Tarjeta de Proyecto 1 -->
+            <div class="tarjeta proyecto">
+                <h3>🌐 Sitio Web Responsivo</h3>
+                <p>Página web adaptable a todos los dispositivos utilizando HTML5 semántico y CSS3 con Flexbox y Grid.</p>
+                <div class="tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>Responsive</span>
+                </div>
+            </div>
+
+            <!-- Tarjeta de Proyecto 2 -->
+            <div class="tarjeta proyecto">
+                <h3>📋 Formulario de Registro</h3>
+                <p>Formulario interactivo con validación en tiempo real usando JavaScript y diseño moderno con CSS.</p>
+                <div class="tags">
+                    <span>HTML5</span>
+                    <span>JavaScript</span>
+                    <span>UI/UX</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER CON CONTACTO -->
+    <footer id="contacto">
+        <p>carlos@villarrica.py | LinkedIn: carlos-martinez</p>
+    </footer>
+
+    <!-- Script para menú hamburguesa en móvil -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navUl = document.querySelector('nav ul');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navUl.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navUl.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
+<style>
+    /* 
+   ============================================
+   PORTAFOLIO.CSS
+   Portafolio de Carlos Antonio Martínez Sánchez
+   Villarrica, Guairá, Paraguay
+   Diseño: Mobile First - Responsive
+   ============================================
+*/
+
+/* ========== RESET Y VARIABLES ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primario: #1a5276;
+    --color-secundario: #2980b9;
+    --color-acento: #e74c3c;
+    --color-oscuro: #2c3e50;
+    --color-claro: #ecf0f1;
+    --color-blanco: #ffffff;
+    --color-texto: #333333;
+    --sombra: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --sombra-hover: 0 8px 15px rgba(0, 0, 0, 0.2);
+    --borde-redondo: 10px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--color-texto);
+    background-color: var(--color-claro);
+}
+
+/* ========== HEADER Y NAVEGACIÓN (MOBILE FIRST) ========== */
+header {
+    background-color: var(--color-oscuro);
+    color: var(--color-blanco);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--sombra);
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 0.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav h1 {
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--color-blanco);
+}
+
+nav ul {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    gap: 0.5rem;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+nav ul.active {
+    display: flex;
+}
+
+nav ul li a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    display: block;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+}
+
+/* Botón hamburguesa */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    position: absolute;
+    right: 1rem;
+    top: 1.2rem;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--color-blanco);
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -6px);
+}
+
+/* ========== RESPONSIVE NAV - TABLET Y DESKTOP ========== */
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    nav h1 {
+        font-size: 1.3rem;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        gap: 1rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    nav h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+    background: linear-gradient(135deg, var(--color-primario), var(--color-secundario));
+    color: var(--color-blanco);
+    padding: 3rem 1rem;
+    text-align: center;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h2 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.hero-content p {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    opacity: 0.9;
+}
+
+/* ========== SECCIONES GENERALES ========== */
+.skills,
+.proyectos {
+    padding: 3rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skills h2,
+.proyectos h2 {
+    text-align: center;
+    color: var(--color-primario);
+    margin-bottom: 2rem;
+    font-size: clamp(1.3rem, 3vw, 2rem);
+}
+
+/* ========== TARJETAS (MOBILE FIRST) ========== */
+.tarjetas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.tarjeta {
+    background-color: var(--color-blanco);
+    border-radius: var(--borde-redondo);
+    padding: 2rem;
+    box-shadow: var(--sombra);
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    color: var(--color-oscuro);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--color-secundario);
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-hover);
+    border-left-color: var(--color-acento);
+}
+
+/* Tarjetas de habilidades */
+.skills .tarjeta {
+    background: linear-gradient(135deg, var(--color-blanco), #f0f8ff);
+    font-size: 1.1rem;
+}
+
+/* Tarjetas de proyectos */
+.proyecto {
+    text-align: left;
+}
+
+.proyecto h3 {
+    color: var(--color-primario);
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.proyecto p {
+    color: #666;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.tags span {
+    background-color: #e8f4fd;
+    color: var(--color-secundario);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+/* ========== RESPONSIVE TARJETAS ========== */
+/* Tablet: 2 columnas */
+@media (min-width: 600px) {
+    .tarjetas-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .tarjeta {
+        width: calc(50% - 1rem);
+        max-width: 400px;
+    }
+}
+
+/* Desktop: 3 columnas */
+@media (min-width: 1024px) {
+    .tarjeta {
+        width: calc(33.333% - 1.5rem);
+        max-width: 350px;
+    }
+}
+
+/* ========== FOOTER ========== */
+footer {
+    background-color: var(--color-oscuro);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* ========== ANIMACIONES ========== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tarjeta {
+    animation: fadeInUp 0.6s ease backwards;
+}
+
+.tarjeta:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.tarjeta:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* ========== SMOOTH SCROLL ========== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ========== UTILIDADES ADICIONALES ========== */
+@media (max-width: 480px) {
+    .hero {
+        min-height: 40vh;
+        padding: 2rem 1rem;
+    }
+
+    .skills,
+    .proyectos {
+        padding: 2rem 0.8rem;
+    }
+
+    .tarjeta {
+        padding: 1.5rem;
+    }
+}
+</style>
